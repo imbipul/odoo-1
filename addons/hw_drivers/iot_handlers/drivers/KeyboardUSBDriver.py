@@ -228,7 +228,7 @@ class KeyboardUSBDriver(Driver):
         If no file or no device type is found we try to detect it automatically.
         """
         device_name = self.device_name.lower()
-        scanner_name = ['barcode', 'scanner', 'reader', 'gigadevice', 'gigadrive', 'honeywell', '7190g']
+        scanner_name = ['barcode', 'scanner', 'reader', 'gigadevice', 'gigadrive', 'honeywell']
         is_scanner = any(x in device_name for x in scanner_name) or self.dev.interface_protocol == '0'
 
         file_path = Path.home() / 'odoo-keyboard-is-scanner.conf'
